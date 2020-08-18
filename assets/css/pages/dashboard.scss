@@ -1,0 +1,141 @@
+.dashboard-content{
+    padding: 80px 30px;
+}
+
+.romb-wrap{
+    position: relative;
+    margin-bottom: 45px;
+    .romb-item{
+        display: block;
+        .romb-head{
+            padding: 14px 25px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            .romb-subject{
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 0;
+                color: $wt;
+            }
+            .romb-class{
+                display: block;
+                font-size: 14px;
+                color: $wt;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+            .teacher{
+                position: relative;
+                padding-left: 55px;
+                .te-image{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                .te-name{
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: $wt;
+                    margin: 0;
+                }
+                .te-title{
+                    display: block;
+                    font-size: 14px;
+                    color: $wt;
+                }
+            }
+        }
+        .romb-body{
+            padding: 20px 25px 15px 25px;
+            border: 1px solid #E0E0E0;
+            background-color: #FFF;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            .schedule-item{
+                .schedule-head{
+                    display: block;
+                    font-size: 13px;
+                    font-weight: medium;
+                    color: #707070;
+                    margin-bottom: 5px;
+                }
+                ul{
+                    padding: 0;
+                    margin: 0 0 10px 0;
+                    li{
+                        list-style: none;
+                        color: #707070;
+                        font-size: 15px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        &:hover, &:focus{
+            text-decoration: none;
+            outline: none;
+            background-color: transparent;
+        }
+    }
+    .opt{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        .dropdown-toggle{
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 5px;
+            &:after{
+                display: none;
+            }
+            &:hover, &:focus{
+                outline: none;
+                background-color: transparent;
+            }
+        }
+        .dropdown-menu{
+            li{
+                a{
+                    font-size: 13px;
+                    &:hover, &:focus{
+                        outline: none;
+                        background-color: $pri;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.romb-class{
+    &:nth-child(5n - 4){
+        .romb-head{
+            background-image: linear-gradient(to bottom, #FF6B6B, #BC3131);
+        }
+    }
+    &:nth-child(5n - 3){
+        .romb-head{
+            background-image: linear-gradient(to bottom, #F19A1A, #FFC73C);
+        }
+    }
+    &:nth-child(5n - 2){
+        .romb-head{
+            background-image: linear-gradient(to bottom, #21C8F6, #637BFF);
+        }
+    }
+    &:nth-child(5n - 1){
+        .romb-head{
+            background-image: linear-gradient(to bottom, #6EDCC4, #1AAB8B);
+        }
+    }
+    &:nth-child(5n){
+        .romb-head{
+            background-image: linear-gradient(to bottom, #8B60ED, #B372BD);
+        }
+    }
+}

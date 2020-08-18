@@ -18,6 +18,7 @@
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "nuxt": "^2.13.0",
+    "nuxt-i18n": "^6.0.0",
     "vee-validate": "^3.3.5",
     "vue-moment": "^4.1.0",
     "vue-markdown": "^2.2.4",

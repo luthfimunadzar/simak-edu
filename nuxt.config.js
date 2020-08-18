@@ -91,6 +91,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://github.com/nuxt-community/nuxt-i18n
+    'nuxt-i18n',
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
@@ -140,6 +142,25 @@ export default {
       logout: '/',
       // home: '/dashboard'
     },
+  },
+  /*
+   ** Nuxt I18n module configuration
+   ** Doc: https://github.com/nuxt-community/nuxt-i18n
+   */
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'id',
+    locales: [{
+        code: 'en',
+        file: 'en-EN.js'
+      },
+      {
+        code: 'id',
+        file: 'id-ID.js'
+      },
+    ],
+    lazy: true,
+    langDir: 'lang/'
   },
   /*
   ** Build configuration

@@ -1,6 +1,11 @@
 <template>
   <div>
+    <Sidebar />
+    <Overlay />
     <Header />
-    <Nuxt />
+    <div class="dashboard-content">
+      <Nuxt />
+    </div>
   </div>
 </template>
+
