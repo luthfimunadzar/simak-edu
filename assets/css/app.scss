@@ -1,0 +1,17 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+  
+/* helpers */
+@import "helpers/variable.scss";
+@import "helpers/button.scss";
+@import "helpers/input.scss";
+@import "helpers/component.scss";
+
+/* layout */
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+/* per page */
+@import "pages/login.scss";

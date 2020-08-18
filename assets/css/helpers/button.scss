@@ -1,0 +1,13 @@
+.btn-primary{
+    padding: 10px 25px;
+    background-color: $pri;
+    border-color: $pri;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: none !important;
+    &:hover, &:focus, &:active, &:disabled{
+        background-color: lighten($pri, 10%) !important;
+        border-color: lighten($pri, 10%) !important;
+        outline: none !important;
+    }
+}
