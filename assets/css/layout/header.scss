@@ -1,5 +1,4 @@
 .navbar{
-    border-bottom: 1px solid #E0E0E0;
     background-color: #FFF;
     .toggle-sidebar{
         img{
@@ -48,29 +47,35 @@
                     text-align: center;
                     .profile-image.big{
                         display: inline-block;
-                        width: 70px;
-                        height: 70px;
+                        width: 100px;
+                        height: 100px;
                         border-radius: 50%;
-                        border: 1px solid #E0E0E0;
                         background-size: cover;
                         background-position: center center;
                         margin-bottom: 5px;
+                        border: none;
                     }
                     .name{
-                        font-size: 16px;
+                        font-size: 20px;
                         font-weight: 600;
-                        margin-bottom: 0;
+                        margin-bottom: 5px;
+                        color: #707070;
                     }
                     .school{
                         font-size: 14px;
+                        color: #707070;
                         font-weight: normal;
-                        opacity: 0.7;
+                    }
+                    hr{
+                        position: relative;
+                        margin: 20px -40px;
                     }
                     .logout{
-                        font-size: 13px;
-                        border: 1px solid #E0E0E0;
-                        padding: 3px 12px;
-                        border-radius: 18px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding: 12px 12px;
+                        width: 100%;
+                        border-radius: 47px;
                         margin-top: 5px;
                     }
                 }
