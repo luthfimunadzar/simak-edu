@@ -14,8 +14,9 @@
           <li class="profile">
             <div class="profile-image big" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
             <h5 class="name">Ahmed Ansori</h5>
-            <h6 class="school">SMPN 1 Ciwaruga</h6>
-            <b-link to="#" class="logout btn btn-outline-dark">Keluar</b-link>
+            <h6 class="school">achasdfsasdf@gmail.com</h6>
+            <hr />
+            <b-link to="#" class="logout btn btn-outline-danger">Logout</b-link>
           </li>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right class="other-apps">
