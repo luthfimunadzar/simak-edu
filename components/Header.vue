@@ -5,10 +5,10 @@
 
     <!-- <b-navbar-brand href="#" class="mx-auto"><img src="/logo.svg" alt=""></b-navbar-brand> -->
     <b-navbar-nav class="header-menu mx-auto">
-      <b-nav-item href="#">FORUM</b-nav-item>
-      <b-nav-item href="#">TUGAS KELAS</b-nav-item>
-      <b-nav-item href="#">ANGGOTA</b-nav-item>
-      <b-nav-item href="#">NILAI</b-nav-item>
+      <b-nav-item to="#">FORUM</b-nav-item>
+      <b-nav-item to="#">TUGAS KELAS</b-nav-item>
+      <b-nav-item to="/dashboard/anggota">ANGGOTA</b-nav-item>
+      <b-nav-item to="#">NILAI</b-nav-item>
     </b-navbar-nav>
 
     <b-navbar-nav class="dropdown-util">
