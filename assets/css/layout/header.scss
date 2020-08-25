@@ -1,5 +1,7 @@
 .navbar{
     background-color: #FFF;
+    position: relative;
+    flex-direction: row-reverse;
     .toggle-sidebar{
         img{
             position: relative;
@@ -12,7 +14,7 @@
             }
         }
     }
-    .navbar-nav{
+    .dropdown-util{
         .dropdown{
             .dropdown-toggle{
                 padding-left: 0;
@@ -108,6 +110,24 @@
                             background-color: #f9f9f9;
                         }
                     }
+                }
+            }
+        }
+    }
+    .header-menu{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .nav-item{
+            margin: 0 10px;
+            .nav-link{
+                font-size: 16px;
+                color: #C4C4C4;
+                transition: all 0.3s ease;
+                &:hover, &:focus{
+                    color: $t;
+                    font-weight: bold;
                 }
             }
         }
