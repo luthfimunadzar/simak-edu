@@ -125,9 +125,29 @@
                 font-size: 16px;
                 color: #C4C4C4;
                 transition: all 0.3s ease;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    height: 6px;
+                    left: 0;
+                    right: 0;
+                    border-radius: 15px;
+                    bottom: -19px;
+                    opacity: 0;
+                    background-color: #637BFF;
+                }
                 &:hover, &:focus{
                     color: $t;
                     font-weight: bold;
+                }
+                &.nuxt-link-exact-active{
+                    color: $t;
+                    font-weight: bold;
+                    &:before{
+                        opacity: 1;
+                    }
                 }
             }
         }

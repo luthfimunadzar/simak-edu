@@ -1,0 +1,54 @@
+.anggota-title{
+    font-size: 33px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.count-siswa{
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+    margin: 12px 0 0 15px;
+}
+
+.sort{
+    float: right;
+    padding: 10px 11px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+}
+
+.anggota-list{
+    clear: both;
+    padding: 0;
+    margin-bottom: 35px;
+    li{
+        list-style: none;
+        .anggota-item{
+            display: block;
+            padding: 20px 36px;
+            background-color: $wt;
+            border-radius: 15px;
+            margin-bottom: 6px;
+            .image{
+                border-radius: 50%;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 45px;
+                height: 45px;
+                border: 1px solid #E0E0E0;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 25px;
+            }
+            h6{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+}
