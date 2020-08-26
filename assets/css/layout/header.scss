@@ -1,7 +1,6 @@
 .navbar{
     background-color: #FFF;
     position: relative;
-    flex-direction: row-reverse;
     .toggle-sidebar{
         img{
             position: relative;
@@ -12,6 +11,19 @@
             img{
                 left: 10px;
             }
+        }
+    }
+    .info-kelas{    
+        margin-left: 100px;
+        h4{
+            margin: 0;
+            font-size: 20px;
+            color: #A09C9C;
+        }
+        h6{
+            margin: 0;
+            font-size: 16px;
+            color: #A09C9C;
         }
     }
     .dropdown-util{

@@ -11,7 +11,7 @@
               <b-dropdown-item href="#">Action</b-dropdown-item>
               <b-dropdown-item href="#">Another action</b-dropdown-item>
             </b-dropdown>
-            <b-link to="" class="romb-item">
+            <b-link :to="'/dashboard/kelas/' + romb.id" class="romb-item">
               <div class="romb-head">
                 <h4 class="romb-subject">{{ romb.subject }}</h4>
                 <span class="romb-class">{{ romb.class }}</span>
@@ -344,6 +344,9 @@ export default {
       ]
 		}
 	},
+  mounted(){
+    this.$store.commit("kelas/setMenu", false);
+  },
 	methods: {
 	}
 }

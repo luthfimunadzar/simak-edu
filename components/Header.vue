@@ -4,14 +4,20 @@
     <!-- <div class="whitespace mr-auto"></div> -->
 
     <!-- <b-navbar-brand href="#" class="mx-auto"><img src="/logo.svg" alt=""></b-navbar-brand> -->
-    <b-navbar-nav class="header-menu mx-auto">
-      <b-nav-item to="#">FORUM</b-nav-item>
+    <div class="info-kelas" v-if="onKelas">
+      <h4>XI IPA 1</h4>
+      <h6>Matematika</h6>
+    </div>
+
+
+    <b-navbar-nav class="header-menu mx-auto" v-if="onKelas">
+      <b-nav-item :to="localePath({ name: 'dashboard-kelas-id', params: { id: idKelas } })">FORUM</b-nav-item>
       <b-nav-item to="#">TUGAS KELAS</b-nav-item>
-      <b-nav-item to="/dashboard/anggota">ANGGOTA</b-nav-item>
+      <b-nav-item :to="localePath({ name: 'dashboard-kelas-id-anggota', params: { id: idKelas } })">ANGGOTA</b-nav-item>
       <b-nav-item to="#">NILAI</b-nav-item>
     </b-navbar-nav>
 
-    <b-navbar-nav class="dropdown-util">
+    <b-navbar-nav class="dropdown-util ml-auto">
       <b-nav-item-dropdown right>
         <template v-slot:button-content>
           <div class="profile-image" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
@@ -48,6 +54,14 @@
 
 <script>
 export default {
+  computed: {
+    onKelas(){
+      return this.$store.state.kelas.onKelas
+    },
+    idKelas(){
+      return this.$store.state.kelas.idKelas
+    }
+  },
   methods: {
     // openSidebar() {
     //   var sidebar = document.querySelector('.sidebar')
