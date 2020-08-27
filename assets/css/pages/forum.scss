@@ -177,6 +177,14 @@
         .more{
             margin-top: 15px;
             float: right;
+            img{
+                transition: all 0.3s ease;
+            }
+            &.showed{
+                img{
+                    transform: rotate(180deg);
+                }
+            }
             &:hover, &:focus{
                 text-decoration: none;
             }
