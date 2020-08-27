@@ -46,9 +46,10 @@
                       {{ com.comment }}
                     </p>
                   </div>
-                  <b-link class="more" @click.native="showContent(index)">
+                  <b-link :class="[{ 'showed' : contentComment[index] === true }, 'more']" @click.native="showContent(index)">
                     <img src="/poly.svg" alt=""> 
-                    Lihat lebih
+                    <span v-if="contentComment[index] === true">Lihat sedikit</span> 
+                    <span v-else>Lihat lebih</span> 
                   </b-link>
                 </div>
                 <div class="me-comment">
