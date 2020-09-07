@@ -19,7 +19,7 @@
         </div>
         <div class="col-lg-4">
           <form class="login-form">
-            <h3>Login Simak education</h3>
+            <h3>Login <span class="d-lg-inline-block d-none">Simak education</span></h3>
             <h6>silahkan login menggunakan akun yang didapat dari instansi / sekolah terkait.</h6>
             <ValidationObserver v-slot="{ handleSubmit }">
               <form @submit.prevent="handleSubmit(submitLogin)">
@@ -39,8 +39,10 @@
                     <b-spinner variant="primary" label="Spinning" class="mt-2"></b-spinner>
                   </div>
                 </div>
+                <div class="text-center">
+                  <b-link href="#" class="forgot-password">Lupa Password ?</b-link>
+                </div>
                 <div class="powered">
-                  <span>Powered by</span>
                   <img src="/logo-savikindo.svg" alt="">
                 </div>
               </form>
