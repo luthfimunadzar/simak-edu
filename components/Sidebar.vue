@@ -4,6 +4,7 @@
 			<div class="logo">
 				<img src="/logo-white.svg" alt="" class="abso">
 				<img src="/logo-full-white.svg" alt="" class="rela">
+				<b-link @click="closeSidebar" class="sb-close d-lg-none d-block"><img src="/sb-close.svg" alt=""></b-link>
 			</div>
 			<b-link to="/dashboard" class="sidebar-main">
 				<img src="/rb.svg" alt="">
@@ -23,6 +24,17 @@
 					</b-link>
 				</li>
 			</ul>
+			<b-link to="" class="view-more d-lg-none d-block">
+				Lihat Semua >
+			</b-link>
+			<div class="profile-sidebar d-lg-none d-block">
+				<div class="wrap-profile">
+					<div class="profile-image big" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
+					<h5 class="name">Ahmed Ansori</h5>
+					<h6 class="school">achasdfsasdf@gmail.com</h6>
+				</div>
+				<b-link to="#" class="logout btn btn-outline-danger">Logout</b-link>
+			</div>
 		</div>
   	</aside>
 </template>
@@ -38,12 +50,11 @@ export default {
 		}
 	},
   methods: {
-//     closeSidebar() {
-//       var sidebar = document.querySelector('.sidebar')
-//       var overlay = document.querySelector('.overlay')
-//       sidebar.classList.remove('opened')
-//       overlay.classList.remove('d-show')
-//     },
+    closeSidebar() {
+      var sidebar = document.querySelector('.sidebar')
+
+      sidebar.classList.remove('slideIn')
+    },
   }
 }
 </script>

@@ -1,6 +1,9 @@
 .navbar{
     background-color: #FFF;
     position: relative;
+    @media screen and (max-width: 991px){
+        background-color: #1E64AD;
+    }
     .toggle-sidebar{
         img{
             position: relative;
