@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <b-row>
-        <b-col lg="3" v-for="romb in rombongan" :key="romb.id" class="romb-class">
+        <b-col xl="3" lg="4" v-for="romb in rombongan" :key="romb.id" class="romb-class">
           <div class="romb-wrap">
             <b-dropdown id="dropdown-right" right text="Right align" class="opt">
               <template v-slot:button-content>
@@ -30,6 +30,9 @@
                     </li>
                   </ul>
                 </div>
+              </div>
+              <div class="romb-link d-lg-none d-block">
+                Lihat Detail
               </div>
             </b-link>
           </div>
@@ -347,7 +350,17 @@ export default {
   mounted(){
     this.$store.commit("kelas/setMenu", false);
   },
+  created(){
+    this.closeSidebarMenu()
+  },
 	methods: {
+    closeSidebarMenu(){
+      var menu = document.querySelector('.menu-rombongan')
+      var sidebar = document.querySelector('.sidebar')
+
+      menu.classList.remove('slideBot')
+      sidebar.classList.remove('slideIn')
+    }
 	}
 }
 </script>

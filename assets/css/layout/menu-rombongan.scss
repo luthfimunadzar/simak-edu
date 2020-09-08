@@ -1,0 +1,91 @@
+.menu-rombongan{
+    background-color: #1E64AD;
+    padding: 70px 24px 24px 24px;
+    position: fixed;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    transition: all 0.3s ease;
+    .menu-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .logo{
+        text-align: center;
+    }
+    .navbar-nav{
+        margin: 25px 0;
+        .nav-item{
+            .nav-link{
+                font-weight: bold;
+                font-size: 20px;
+                color: $wt;
+                text-align: center;
+                position: relative;
+                &:before{
+                    content: "";
+                    width: 37px;
+                    height: 4px;
+                    border-radius: 15px;
+                    background-color: #C3C3C3;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    opacity: 0;
+                    transform: translateX(-50%);
+                }
+                &.nuxt-link-active{
+                    &:before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .login-simak{
+        text-align: center;
+        .ket{
+            text-align: center;
+            color: #D0D2D3;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: #A09C9C;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+            span{
+                display: inline-block;
+                position: relative;
+                z-index: 2;
+                background-color: #1E64AD;
+                padding: 0 20px;
+            }
+        }
+        .simak-link{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &.slideBot{
+        top: 0;
+    }
+}

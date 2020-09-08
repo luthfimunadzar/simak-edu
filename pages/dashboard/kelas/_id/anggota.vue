@@ -94,5 +94,17 @@ export default {
     this.$store.commit("kelas/setMenu", true);
     this.$store.commit("kelas/setIdKelas", this.$route.params.id);
   },
+  created(){
+    this.closeSidebarMenu()
+  },
+	methods: {
+    closeSidebarMenu(){
+      var menu = document.querySelector('.menu-rombongan')
+      var sidebar = document.querySelector('.sidebar')
+
+      menu.classList.remove('slideBot')
+      sidebar.classList.remove('slideIn')
+    }
+	}
 }
 </script>
