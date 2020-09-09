@@ -3,6 +3,11 @@
     @media screen and (max-width: 991px){
         padding: 30px 15px;
     }
+    &.fullRes{
+        @media screen and (max-width: 991px){
+            padding: 0;
+        }
+    }
 }
 
 .romb-wrap{
