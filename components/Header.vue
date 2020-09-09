@@ -4,7 +4,7 @@
     <!-- <div class="whitespace mr-auto"></div> -->
 
     <b-navbar-brand href="#" class="mr-auto d-lg-none d-flex"><img src="/logo-white.svg" alt=""></b-navbar-brand>
-    <div class="info-kelas d-lg-flex d-none" v-if="onKelas">
+    <div class="info-kelas d-lg-block d-none" v-if="onKelas">
       <h4>XI IPA 1</h4>
       <h6>Matematika</h6>
     </div>

@@ -17,3 +17,18 @@
         display: block;
     }
 }
+
+.no-gutters-mobile {
+    @media screen and (max-width: 991px){
+        margin-right: 0;
+        margin-left: 0;
+    }
+  
+    > .col,
+    > [class*="col-"] {
+      @media screen and (max-width: 991px){
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }

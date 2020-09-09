@@ -1,9 +1,10 @@
 <template>
   <div>
-    <b-container fluid>
-      <b-row>
+    <b-container fluid class="px-lg-3 px-0">
+      <b-row class="no-gutters-mobile">
         <b-col lg="10" offset-lg="1">
           <div class="head-kelas-panel">
+            <img src="/math.svg" alt="" class="illu">
             <h3 class="subject">Matematika</h3>
             <h5 class="kelas">XI IPA 1</h5>
 
@@ -12,14 +13,14 @@
               <h5 class="name">Indra Waluyo S.Pd</h5>
               <span class="title">Guru Pengajar</span>
             </div>
-
-            <img src="/math.svg" alt="" class="illu">
           </div>
           
-          <b-row>
+          <b-row class="no-gutters-mobile">
             <b-col lg="3">
               <div class="soon-tugas">
-                <h5>Tugas Akan Datang</h5>
+                <h5>
+                  <span>Tugas Akan Datang</span>
+                </h5>
                 <div class="schedule-item" v-for="sche in schedule" :key="sche.id">
                   <span class="schedule-head">{{ sche.date }}</span>
                   <ul>
@@ -38,9 +39,11 @@
               </div>
               <div class="comment-list">
                 <div class="comment-item" v-for="(com, index) in comments" :key="com.id">
-                  <div class="image" :style="{ backgroundImage: 'url(' + com.img + ')' }"></div>
-                  <h5 class="name">{{ com.name }}</h5>
-                  <h6 class="title">{{ com.title }}</h6>
+                  <div class="comment-head">
+                    <div class="image" :style="{ backgroundImage: 'url(' + com.img + ')' }"></div>
+                    <h5 class="name">{{ com.name }}</h5>
+                    <h6 class="title">{{ com.title }}</h6>
+                  </div>
                   <div :class="[{ 'showed' : contentComment[index] === true }, 'content']">
                     <p>
                       {{ com.comment }}
@@ -55,7 +58,7 @@
                 <div class="me-comment">
                   <div class="image" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
                   <b-input-group>
-                    <b-form-input type="text" class="form-control" placeholder="Bagikan kepada kelas Matematika  XII IPA 1"></b-form-input>
+                    <b-form-input type="text" class="form-control" placeholder="Bagikan kepada kelas"></b-form-input>
                     <b-input-group-append>
                       <b-button variant="info"><img src="/send.svg" alt=""></b-button>
                     </b-input-group-append>
@@ -126,8 +129,6 @@ export default {
   mounted(){
     this.$store.commit("kelas/setMenu", true);
     this.$store.commit("kelas/setIdKelas", this.$route.params.id);
-  },
-  created(){
     this.closeSidebarMenu()
   },
   methods: {

@@ -349,8 +349,6 @@ export default {
 	},
   mounted(){
     this.$store.commit("kelas/setMenu", false);
-  },
-  created(){
     this.closeSidebarMenu()
   },
 	methods: {

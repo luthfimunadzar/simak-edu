@@ -93,8 +93,6 @@ export default {
   mounted(){
     this.$store.commit("kelas/setMenu", true);
     this.$store.commit("kelas/setIdKelas", this.$route.params.id);
-  },
-  created(){
     this.closeSidebarMenu()
   },
 	methods: {
