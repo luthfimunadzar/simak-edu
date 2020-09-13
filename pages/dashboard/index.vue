@@ -4,7 +4,7 @@
       <b-row>
         <b-col xl="3" lg="4" v-for="romb in rombongan" :key="romb.id" class="romb-class">
           <div class="romb-wrap">
-            <b-dropdown id="dropdown-right" right text="Right align" class="opt">
+            <b-dropdown id="dropdown-right" right class="opt">
               <template v-slot:button-content>
                 <img src="/dots.svg" alt="">
               </template>

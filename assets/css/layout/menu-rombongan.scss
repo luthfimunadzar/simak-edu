@@ -37,7 +37,7 @@
                     opacity: 0;
                     transform: translateX(-50%);
                 }
-                &.nuxt-link-active{
+                &.nuxt-link-exact-active{
                     &:before{
                         opacity: 1;
                     }

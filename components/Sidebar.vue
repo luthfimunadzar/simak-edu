@@ -18,7 +18,7 @@
 			<ul class="list-rombongan">
 				<li v-for="kelas in classes" :key="kelas.id">
 					<b-link :to="'dashboard/rombongan/' + kelas.id">
-						<div class="icon">{{ kelas.class_name.substring(0, 1) }}</div>
+						<div class="icon">{{ kelas.class_name.substring(0, kelas.class_name.indexOf(" ")) }}</div>
 						<h5>{{ kelas.class_name }}</h5>
 						<!-- <h6>{{ kelas.subject }}</h6> -->
 					</b-link>
@@ -44,8 +44,8 @@ export default {
 	data(){
 		return{
 			classes: [
-				{ id: 1, class_name: 'X IPA 2', subject: 'Matematika'},
-				{ id: 2, class_name: 'X IPA 3', subject: 'Matematika'},
+				{ id: 1, class_name: 'XI IPA 2', subject: 'Matematika'},
+				{ id: 2, class_name: 'XII IPA 3', subject: 'Matematika'},
 			]
 		}
 	},

@@ -3,7 +3,19 @@
     <b-container fluid>
       <b-row>
         <b-col lg="8" offset-lg="2">
-          <h3 class="anggota-title">Pendidik</h3>
+          <div class="filter-search d-lg-none d-block">
+            <b-link class="filter">
+              Urutkan
+              <img src="/adown-gray.svg" alt="">
+            </b-link>
+            <b-link class="search">
+              <img src="/search.svg" alt="">
+            </b-link>
+          </div>
+
+          <h3 class="anggota-title">
+            <span>Pendidik</span> 
+          </h3>
           <ul class="anggota-list">
             <li v-for="guru in gurus" :key="guru.id">
               <div class="anggota-item">
@@ -12,7 +24,9 @@
               </div>
             </li>
           </ul>
-          <h3 class="anggota-title">Peserta Didik</h3>
+          <h3 class="anggota-title">  
+            <span>Peserta Pendidik</span> 
+          </h3>
           <span class="count-siswa">{{ murids.length }} Siswa</span>
           <b-link class="sort"><img src="/sort.svg" alt=""></b-link>
           <ul class="anggota-list">
