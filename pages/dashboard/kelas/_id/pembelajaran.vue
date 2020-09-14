@@ -13,7 +13,7 @@
           </div>
         </b-col>    
         <b-col lg="8">
-          <div class="list-pembelajaran">
+          <div class="list-pembelajaran" v-if="!detailOpened">
             <div class="head-list">
               <form action="">
                 <input type="search" class="search form-control">
@@ -81,12 +81,12 @@
                   </b-dropdown>
                   <h6>{{ topik.kompentensi }}</h6>
 
-                  <b-link class="aktifitas-item" v-for="aktif in topik.aktifitas" :key="aktif.id">
-                    <span class="image" v-if="aktif.type==='materi'"></span>
-                    <span class="image red" v-else-if="aktif.type==='video'"></span>
-                    <span class="image green" v-else-if="aktif.type==='tugas'"></span>
-                    <span class="image yellow" v-else-if="aktif.type==='pertanyaan'"></span>
-                    <span class="image purple" v-else-if="aktif.type==='ulangan'"></span>
+                  <b-link class="aktifitas-item" @click="goToDetail" v-for="aktif in topik.aktifitas" :key="aktif.id">
+                    <span class="icon" v-if="aktif.type==='materi'"></span>
+                    <span class="icon red" v-else-if="aktif.type==='video'"></span>
+                    <span class="icon green" v-else-if="aktif.type==='tugas'"></span>
+                    <span class="icon yellow" v-else-if="aktif.type==='pertanyaan'"></span>
+                    <span class="icon purple" v-else-if="aktif.type==='ulangan'"></span>
 
                     <p>{{ aktif.name }}</p>
 
@@ -94,6 +94,37 @@
                   </b-link>
                 </div>
               </template>
+            </div>
+          </div>
+          <div class="detail-aktifitas" v-else>
+            <div class="head-detail">
+              <b-link class="back-link" @click="backToTopic">
+                <img src="/back.svg" alt="">
+              </b-link>
+              <h5>Bab 1 Bilangan Bulat</h5>
+              <b-dropdown right class="opt">
+                <template v-slot:button-content>
+                  <img src="/dots.svg" alt="">
+                </template>
+                <b-dropdown-item href="#">Action</b-dropdown-item>
+                <b-dropdown-item href="#">Another action</b-dropdown-item>
+              </b-dropdown>
+              <h6 class="kompetensi">KD 3.1 & 4.1</h6>
+            </div>
+            <div class="body-detail">
+              <span class="icon red"></span>
+              <h3>Video Penjelasan Phytagoras</h3>
+              <span class="date">Diposting Tanggal 03 Agu</span>
+              <span class="date">Terakhir diedit (13/09/2020)</span>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea</p>
+              <b-link href="" class="video-link">
+                <div class="image" :style="{ backgroundImage: 'url(https://img.youtube.com/vi/' + '1T2gaG5vPk8' + '/0.jpg)' }"></div>
+                <div class="wrap">
+                  <h6>Matematika Kelas 8 - Teori Phytagoras 1</h6>
+                  <span>Video durasi 25 menit</span>
+                </div>
+              </b-link>
             </div>
           </div>
         </b-col>
@@ -109,6 +140,7 @@ export default {
   layout: 'dashboard',
   data(){
     return{
+      detailOpened: false,
       kompDasar: 1,
       allTopik: true,
       topikActive: [],
@@ -264,6 +296,12 @@ export default {
       this.topikActive[index] = true
 
       this.wrapTopik = _.filter(this.topik, ['id', id]);
+    },
+    goToDetail(){
+      this.detailOpened = true
+    },
+    backToTopic(){
+      this.detailOpened = false
     }
 	}
 }
