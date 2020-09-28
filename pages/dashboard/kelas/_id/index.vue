@@ -55,7 +55,7 @@
                     <span v-else>Lihat lebih</span> 
                   </b-link>
                 </div>
-                <div class="me-comment">
+                <div class="me-comment rounded-input">
                   <div class="image" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
                   <b-input-group>
                     <b-form-input type="text" class="form-control" placeholder="Bagikan kepada kelas"></b-form-input>

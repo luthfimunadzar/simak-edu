@@ -32,3 +32,32 @@
       }
     }
   }
+
+  
+.input-label{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.clearfix{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.modal{
+  .modal-body{
+    padding: 0;
+    .modal-inside{
+      padding: 15px 20px;
+    }
+    .btn-wrap-modal{
+      border-top: 1px solid #E0E0E0;
+      padding: 15px 20px;
+    }
+  }
+}

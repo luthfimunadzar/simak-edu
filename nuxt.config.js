@@ -76,6 +76,14 @@ export default {
       src: '~/plugins/vue-markdown.js',
       ssr: false,
     },
+    { 
+      src: '~/plugins/vue2-datetimepicker', 
+      ssr: false, 
+    },
+    { 
+      src: '~/plugins/vue2-dropzone', 
+      ssr: false, 
+    },
   ],
   /*
   ** Auto import components

@@ -11,3 +11,30 @@
         outline: none !important;
     }
 }
+
+.btn-secondary{
+    border: none;
+    background-color: $ter;
+    padding: 13px 20px;
+    border-radius: 8px;
+    color: $wt;
+    font-weight: 600;
+}
+
+.btn-danger{
+    border: none;
+    background-color: #E64242;
+    padding: 13px 20px;
+    border-radius: 8px;
+    color: $wt;
+    font-weight: 600;
+}
+
+.btn-warning{
+    border: none;
+    background-color: #E29E3A;
+    padding: 13px 20px;
+    border-radius: 8px;
+    color: $wt;
+    font-weight: 600;
+}

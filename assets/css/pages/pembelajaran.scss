@@ -369,3 +369,21 @@
         }
     }
 }
+
+.comment-list.pembelajaran{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    padding: 30px 0 0 0;
+    .comment-item{
+        padding: 15px 41px;
+        & + .comment-item{
+            border-top: none;
+        }
+    }
+    .me-comment{
+        &.rounded-input{
+            margin: 20px 0 0 0;
+        }
+    }
+}

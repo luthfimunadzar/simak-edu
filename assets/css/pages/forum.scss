@@ -183,50 +183,6 @@
     }
 }
 
-.me-comment{
-    border: 1px solid #E0E0E0;
-    border-radius: 15px;
-    padding: 15px 41px 15px 85px;
-    background-color: $wt;
-    position: relative;
-    margin-bottom: 15px;
-    @media screen and (max-width: 991px){
-        display: none;
-    }
-    .image{
-        border-radius: 50%;
-        background-size: cover;
-        background-position: center center;
-        width: 46px;
-        height: 46px;
-        position: absolute;
-        top: 50%;
-        left: 40px;
-        transform: translateY(-50%);
-    }
-    .form-control{
-        border: none;
-        font-size: 15px;
-        color: $t;
-        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: #E0E0E0;
-        }
-        &::-moz-placeholder { /* Firefox 19+ */
-            color: #E0E0E0;
-        }
-        &:-ms-input-placeholder { /* IE 10+ */
-            color: #E0E0E0;
-        }
-        &:-moz-placeholder { /* Firefox 18- */
-            color: #E0E0E0;
-        }
-        &:hover, &:focus{
-            outline: none;
-            box-shadow: none;
-        }
-    }
-}
-
 .comment-list{
     border-radius: 15px;
     border: 1px solid #E0E0E0;
@@ -319,7 +275,52 @@
             border-top: 1px solid #E0E0E0;
         }
     }
-    .me-comment{
+}
+
+.me-comment{
+    border: 1px solid #E0E0E0;
+    border-radius: 15px;
+    padding: 15px 41px 15px 85px;
+    background-color: $wt;
+    position: relative;
+    margin-bottom: 15px;
+    @media screen and (max-width: 991px){
+        display: none;
+    }
+    .image{
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center center;
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+    }
+    .form-control{
+        border: none;
+        font-size: 15px;
+        color: $t;
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #E0E0E0;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #E0E0E0;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #E0E0E0;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #E0E0E0;
+        }
+        &:hover, &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    
+    &.rounded-input{
         border: none;
         border-top: 1px solid #E0E0E0;
         border-radius: 15px;
