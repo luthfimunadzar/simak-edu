@@ -28,7 +28,7 @@
                   <img src="/materi-w.svg" alt="" class="abso">
                   Materi
                 </b-dropdown-item>
-                <b-dropdown-item href="#">
+                <b-dropdown-item :to="localePath({ name: 'dashboard-kelas-id-add-tugas', params: { id: $route.params.id } })">
                   <img src="/tugas.svg" alt="" class="rela">
                   <img src="/tugas-w.svg" alt="" class="abso">
                   Tugas
@@ -125,6 +125,34 @@
                   <span>Video durasi 25 menit</span>
                 </div>
               </b-link>
+            </div>
+            <div class="comment-list pembelajaran">
+              <div class="comment-item" v-for="(com, index) in comments" :key="com.id">
+                <div class="comment-head">
+                  <div class="image" :style="{ backgroundImage: 'url(' + com.img + ')' }"></div>
+                  <h5 class="name">{{ com.name }}</h5>
+                  <h6 class="title">{{ com.title }}</h6>
+                </div>
+                <div :class="[{ 'showed' : contentComment[index] === true }, 'content']">
+                  <p>
+                    {{ com.comment }}
+                  </p>
+                </div>
+                <b-link :class="[{ 'showed' : contentComment[index] === true }, 'more']" @click.native="showContent(index)">
+                  <img src="/poly.svg" alt=""> 
+                  <span v-if="contentComment[index] === true">Lihat sedikit</span> 
+                  <span v-else>Lihat lebih</span> 
+                </b-link>
+              </div>
+              <div class="me-comment rounded-input pembelajaran">
+                <div class="image" :style="{ backgroundImage: 'url(' + '/profile.svg' + ')' }"></div>
+                <b-input-group>
+                  <b-form-input type="text" class="form-control" placeholder="Bagikan kepada kelas"></b-form-input>
+                  <b-input-group-append>
+                    <b-button variant="info"><img src="/send.svg" alt=""></b-button>
+                  </b-input-group-append>
+                </b-input-group>
+              </div>
             </div>
           </div>
         </b-col>
@@ -268,7 +296,24 @@ export default {
             },
           ]
         }
-      ]
+      ],
+      contentComment: [],
+      comments: [
+        {
+          id: 1,
+          img: '/profile2.svg',
+          name: 'Deden Nugraha',
+          title: 'Siswa XI IPA 2',
+          comment: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+        },
+        {
+          id: 2,
+          img: '/profile2.svg',
+          name: 'Deden Nugraha',
+          title: 'Siswa XI IPA 2',
+          comment: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+        },
+      ],
     }
   },
   mounted(){
@@ -302,7 +347,15 @@ export default {
     },
     backToTopic(){
       this.detailOpened = false
-    }
+    },
+    showContent(index){
+      console.log(index)
+      if(this.contentComment[index]){
+        this.$set(this.contentComment, index, false)
+      } else {
+        this.$set(this.contentComment, index, true)
+      }
+    },
 	}
 }
 </script>
