@@ -9,7 +9,7 @@
         <b-nav-item :to="localePath({ name: 'dashboard-kelas-id', params: { id: idKelas } })">FORUM</b-nav-item>
         <b-nav-item :to="localePath({ name: 'dashboard-kelas-id-pembelajaran', params: { id: idKelas } })">PEMBELAJARAN</b-nav-item>
         <b-nav-item :to="localePath({ name: 'dashboard-kelas-id-anggota', params: { id: idKelas } })">ANGGOTA</b-nav-item>
-        <b-nav-item to="#">NILAI</b-nav-item>
+        <b-nav-item :to="localePath({ name: 'dashboard-kelas-id-nilai', params: { id: idKelas } })">NILAI</b-nav-item>
       </b-navbar-nav>
 
       <div class="login-simak">
