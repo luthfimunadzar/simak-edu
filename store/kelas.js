@@ -1,6 +1,7 @@
 export const state = () => ({
   onKelas: false,
   idKelas: null,
+  whiteBg: false,
 })
 
 export const mutations = {
@@ -9,5 +10,8 @@ export const mutations = {
   },
   setIdKelas(state, data) {
     state.idKelas = data
+  },
+  setWhiteBg(state, data) {
+    state.whiteBg = data
   },
 }

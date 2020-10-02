@@ -1,5 +1,6 @@
 .dashboard-content{
     padding: 40px 15px 40px 115px;
+    min-height: calc(100vh - 97px);
     @media screen and (max-width: 991px){
         padding: 30px 15px;
     }
@@ -8,6 +9,9 @@
             padding: 0;
             background-color: $wt;
         }
+    }
+    &.white-bg{
+        background-color: $wt;
     }
 }
 
