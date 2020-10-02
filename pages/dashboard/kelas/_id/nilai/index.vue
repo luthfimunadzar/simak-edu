@@ -13,7 +13,6 @@
                 format="MMM YYYY"
                 value-type="MMM YYYY"
                 placeholder="Jun 2020 ~ Jul 2020"
-                :disabled-date="notBeforeToday"
                 range
               ></date-picker>
             </client-only>
@@ -41,7 +40,7 @@
             <template v-slot:item="{ item }">
               <tr>
                 <td><span :class="[{ 'rate': item.name === 'Rata-Rata Kelas' },'image-siswa']" :style="{ backgroundImage: 'url(' + item.img + ')' }"></span></td>
-                <td>{{ item.name }}</td>
+                <td><b-link :to="localePath({ name: 'dashboard-kelas-id-nilai-idn', params: { id: $route.params.id, idn: item.id } })" class="nilai-detail-link">{{ item.name }}</b-link></td>
                 <td v-for="nilai in item.nilaiall" :key="nilai.id">{{ nilai.nilai }}</td>
               </tr>
             </template>

@@ -44,13 +44,14 @@
             }
             h3{
                 font-size: 37px;
+                width: 80%;
                 font-weight: bold;
                 color: $t;
                 margin-bottom: 150px;
                 position: relative;
                 z-index: 2;
                 @media screen and (max-width: 1199px){
-                    font-size: 32px;
+                    font-size: 30px;
                 }
                 @media screen and (max-width: 991px){
                     display: none;
@@ -102,7 +103,7 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                right: -30px;
+                right: -20px;
                 width: 500px;
                 z-index: 1;
                 @media screen and (max-width: 1199px){
