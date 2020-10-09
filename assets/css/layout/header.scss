@@ -1,0 +1,171 @@
+.navbar{
+    background-color: #FFF;
+    position: relative;
+    border-bottom: 1px solid #E0E0E0;
+    @media screen and (max-width: 991px){
+        background-color: #1E64AD;
+    }
+    .toggle-sidebar{
+        img{
+            position: relative;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        &:hover, &:focus{
+            img{
+                left: 10px;
+            }
+        }
+    }
+    .info-kelas{    
+        margin-left: 100px;
+        h4{
+            margin: 0;
+            font-size: 20px;
+            color: #A09C9C;
+        }
+        h6{
+            margin: 0;
+            font-size: 16px;
+            color: #A09C9C;
+        }
+    }
+    .dropdown-util{
+        .dropdown{
+            .dropdown-toggle{
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 7px;
+                .profile-image{
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    border: 1px solid #E0E0E0;
+                    background-size: cover;
+                    background-position: center center;
+                }
+                &:after{
+                    display: none;
+                }
+            }
+            &.other-apps{
+                margin-left: 35px;
+                .dropdown-toggle{
+                    padding-top: 14px;
+                    padding-bottom: 13px;
+                }
+            }
+            .dropdown-menu{
+                min-width: 310px;
+                border: none;
+                border-radius: 24px;
+                box-shadow: 0px 8px 12px rgba($color: #000000, $alpha: 0.16);
+                padding: 30px 40px;
+                .profile{
+                    text-align: center;
+                    .profile-image.big{
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background-size: cover;
+                        background-position: center center;
+                        margin-bottom: 5px;
+                        border: none;
+                    }
+                    .name{
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                        color: #707070;
+                    }
+                    .school{
+                        font-size: 14px;
+                        color: #707070;
+                        font-weight: normal;
+                    }
+                    hr{
+                        position: relative;
+                        margin: 20px -40px;
+                    }
+                    .logout{
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding: 12px 12px;
+                        width: 100%;
+                        border-radius: 47px;
+                        margin-top: 5px;
+                    }
+                }
+                .other-link{
+                    display: inline-block;
+                    width: 49%;
+                    a{
+                        display: block;
+                        text-align: center;
+                        color: #707070;
+                        font-size: 16px;
+                        transition: all 0.3s ease;
+                        padding: 10px 0;
+                        .icon-image{
+                            width: 70px;
+                            height: 70px;
+                            margin-bottom: 10px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            border-radius: 50%;
+                            border: 1px solid #707070;
+                            display: inline-block;
+                        }
+                        span{
+                            display: block;
+                        }
+                        &:hover, &:focus{
+                            text-decoration: none;
+                            background-color: #f9f9f9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-menu{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .nav-item{
+            margin: 0 10px;
+            .nav-link{
+                font-size: 16px;
+                color: #C4C4C4;
+                transition: all 0.3s ease;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    height: 6px;
+                    left: 0;
+                    right: 0;
+                    border-radius: 15px;
+                    bottom: -19px;
+                    opacity: 0;
+                    background-color: #637BFF;
+                }
+                &:hover, &:focus{
+                    color: $t;
+                    font-weight: bold;
+                }
+                &.nuxt-link-exact-active{
+                    color: $t;
+                    font-weight: bold;
+                    &:before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

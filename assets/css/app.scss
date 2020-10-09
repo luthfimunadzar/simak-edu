@@ -1,6 +1,7 @@
 body{
     font-family: "Open Sans", sans-serif;
     color: #000;
+    background-color: #FAFAFA;
 }
   
 /* helpers */
@@ -12,6 +13,14 @@ body{
 /* layout */
 @import "layout/header.scss";
 @import "layout/footer.scss";
+@import "layout/sidebar.scss";
+@import "layout/menu-rombongan.scss";
 
 /* per page */
 @import "pages/login.scss";
+@import "pages/dashboard.scss";
+@import "pages/forum.scss";
+@import "pages/anggota.scss";
+@import "pages/pembelajaran.scss";
+@import "pages/add-tugas.scss";
+@import "pages/nilai.scss";
