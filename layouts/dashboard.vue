@@ -3,7 +3,7 @@
     <Sidebar />
     <Header />
     <MenuRom />
-    <div :class="['dashboard-content', {'fullRes': onKelas}, {'white-bg': whiteBg}]">
+    <div :class="['dashboard-content', {'fullRes': onKelas}]">
       <Nuxt />
     </div>
   </div>

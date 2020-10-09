@@ -3,48 +3,50 @@
     <b-container fluid>
       <b-row>
         <b-col lg="12">
-          <div class="periode">
-            <label for="" class="input-label">PERIODE AJAR</label>
-            <client-only>
-              <date-picker
-                id="published_at"
-                v-model="date"
-                type="month"
-                format="MMM YYYY"
-                value-type="MMM YYYY"
-                placeholder="Jun 2020 ~ Jul 2020"
-                range
-              ></date-picker>
-            </client-only>
-          </div>
+          <div class="wrap-nilai">
+            <div class="periode">
+              <label for="" class="input-label">PERIODE AJAR</label>
+              <client-only>
+                <date-picker
+                  id="published_at"
+                  v-model="date"
+                  type="month"
+                  format="MMM YYYY"
+                  value-type="MMM YYYY"
+                  placeholder="Jun 2020 ~ Jul 2020"
+                  range
+                ></date-picker>
+              </client-only>
+            </div>
 
-          <v-data-table
-            height="78vh"
-            :items="itemsBackup"
-            fixed-header
-            :hide-default-footer="true"
-            class="table-nilai"
-          >
-            <template v-slot:header>
-              <thead>
+            <v-data-table
+              height="78vh"
+              :items="itemsBackup"
+              fixed-header
+              :hide-default-footer="true"
+              class="table-nilai"
+            >
+              <template v-slot:header>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th v-for="aktif in itemsBackup[0].nilaiall" :key="aktif.id">
+                      <h6>{{ aktif.nama_aktifitas }}</h6>
+                      <span>{{ aktif.date }}</span>
+                    </th>
+                  </tr>
+                </thead>
+              </template>
+              <template v-slot:item="{ item }">
                 <tr>
-                  <th></th>
-                  <th></th>
-                  <th v-for="aktif in itemsBackup[0].nilaiall" :key="aktif.id">
-                    <h6>{{ aktif.nama_aktifitas }}</h6>
-                    <span>{{ aktif.date }}</span>
-                  </th>
+                  <td><span :class="[{ 'rate': item.name === 'Rata-Rata Kelas' },'image-siswa']" :style="{ backgroundImage: 'url(' + item.img + ')' }"></span></td>
+                  <td><b-link :to="localePath({ name: 'dashboard-kelas-id-nilai-idn', params: { id: $route.params.id, idn: item.id } })" class="nilai-detail-link">{{ item.name }}</b-link></td>
+                  <td v-for="nilai in item.nilaiall" :key="nilai.id">{{ nilai.nilai }}</td>
                 </tr>
-              </thead>
-            </template>
-            <template v-slot:item="{ item }">
-              <tr>
-                <td><span :class="[{ 'rate': item.name === 'Rata-Rata Kelas' },'image-siswa']" :style="{ backgroundImage: 'url(' + item.img + ')' }"></span></td>
-                <td><b-link :to="localePath({ name: 'dashboard-kelas-id-nilai-idn', params: { id: $route.params.id, idn: item.id } })" class="nilai-detail-link">{{ item.name }}</b-link></td>
-                <td v-for="nilai in item.nilaiall" :key="nilai.id">{{ nilai.nilai }}</td>
-              </tr>
-            </template>
-          </v-data-table>
+              </template>
+            </v-data-table>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -1031,7 +1033,6 @@ export default {
   },
   mounted(){
     this.$store.commit("kelas/setMenu", true);
-    this.$store.commit("kelas/setWhiteBg", true);
     this.$store.commit("kelas/setIdKelas", this.$route.params.id);
     this.closeSidebarMenu()
   },
