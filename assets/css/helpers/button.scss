@@ -4,6 +4,7 @@
     border-color: $pri;
     border-radius: 10px;
     font-size: 16px;
+    color: $wt !important;
     box-shadow: none !important;
     &:hover, &:focus, &:active, &:disabled{
         background-color: lighten($pri, 10%) !important;
@@ -17,7 +18,7 @@
     background-color: $ter;
     padding: 13px 20px;
     border-radius: 8px;
-    color: $wt;
+    color: $wt !important;
     font-weight: 600;
 }
 
@@ -26,7 +27,7 @@
     background-color: #E64242;
     padding: 13px 20px;
     border-radius: 8px;
-    color: $wt;
+    color: $wt !important;
     font-weight: 600;
 }
 
@@ -35,6 +36,6 @@
     background-color: #E29E3A;
     padding: 13px 20px;
     border-radius: 8px;
-    color: $wt;
+    color: $wt !important;
     font-weight: 600;
 }

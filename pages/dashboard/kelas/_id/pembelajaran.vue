@@ -23,10 +23,15 @@
                 <template v-slot:button-content>
                   + Buat
                 </template>
-                <b-dropdown-item href="#">
+                <b-dropdown-item :to="localePath({ name: 'dashboard-kelas-id-add-materi', params: { id: $route.params.id } })">
                   <img src="/materi.svg" alt="" class="rela">
                   <img src="/materi-w.svg" alt="" class="abso">
                   Materi
+                </b-dropdown-item>
+                <b-dropdown-item :to="localePath({ name: 'dashboard-kelas-id-bank-soal', params: { id: $route.params.id } })">
+                  <img src="/tugas.svg" alt="" class="rela">
+                  <img src="/tugas-w.svg" alt="" class="abso">
+                  Buat Bank Soal
                 </b-dropdown-item>
                 <b-dropdown-item :to="localePath({ name: 'dashboard-kelas-id-add-tugas', params: { id: $route.params.id } })">
                   <img src="/tugas.svg" alt="" class="rela">
@@ -47,11 +52,6 @@
                   <img src="/tugas-sebelumnya.svg" alt="" class="rela">
                   <img src="/tugas-sebelumnya-w.svg" alt="" class="abso">
                   Gunakan Kembali Postingan
-                </b-dropdown-item>
-                <b-dropdown-item href="#">
-                  <img src="/topik.svg" alt="" class="rela">
-                  <img src="/topik-w.svg" alt="" class="abso">
-                  Topik
                 </b-dropdown-item>
               </b-dropdown>
               <b-form-select v-model="kompDasar" class="kompDasar">

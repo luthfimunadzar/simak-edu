@@ -11,7 +11,7 @@
                     <div class="back-wrap">
                       <b-link :to="localePath({ name: 'dashboard-kelas-id-pembelajaran', params: { id: $nuxt.$route.params.id } })" class="back-link">
                         <img src="/back.svg" alt="">
-                        Buat Tugas
+                        Buat Materi
                       </b-link>
                     </div>
                     <div class="input-wrap">
@@ -42,23 +42,6 @@
                       <label for="" class="input-label">Untuk Kelas</label>
                       <ValidationProvider name="Kelas" rules="required" v-slot="{ errors }" class="form-wrap">
                         <v-select v-model="form.kelas" placeholder="Pilih Kelas" :class="[{'is-invalid': errors[0] }, errors[0] ? 'mb-1' : 'mb-4' ]" :options="['Kelas XI IPA 2', 'Kelas XI IPA 1', 'Kelas XI IPS 2']"></v-select>
-                        <span class="validator text-danger">{{ errors[0] }}</span>
-                      </ValidationProvider>
-
-                      <label for="" class="input-label">Waktu/Tenggat</label>
-                      <ValidationProvider name="Waktu/Tenggat" rules="required" v-slot="{ errors }" class="form-wrap">
-                        <client-only>
-                          <date-picker
-                            id="published_at"
-                            v-model="form.date"
-                            type="datetime"
-                            format="DD/MM/YYYY HH:mm"
-                            value-type="DD/MM/YYYY HH:mm"
-                            placeholder="DD/MM/YYYY HH:mm"
-                            :disabled-date="notBeforeToday"
-                            inline
-                          ></date-picker>
-                        </client-only> 
                         <span class="validator text-danger">{{ errors[0] }}</span>
                       </ValidationProvider>
                       
