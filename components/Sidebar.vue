@@ -6,13 +6,17 @@
 				<img src="/logo-full-white.svg" alt="" class="rela">
 				<b-link @click="closeSidebar" class="sb-close d-lg-none d-block"><img src="/sb-close.svg" alt=""></b-link>
 			</div>
-			<b-link to="/dashboard" class="sidebar-main">
+			<b-link :to="localePath({ name: 'dashboard' })" class="sidebar-main">
 				<img src="/rb.svg" alt="">
 				<h6>Rombongan Belajar</h6>
 			</b-link>
 			<b-link to="#" class="sidebar-main">
 				<img src="/ud.svg" alt="">
 				<h6>Untuk Diperiksa</h6>
+			</b-link>
+			<b-link :to="localePath({ name: 'dashboard-bank-soal' })" class="sidebar-main">
+				<img src="/rb.svg" alt="">
+				<h6>Bank Soal</h6>
 			</b-link>
 			<h6 class="ket">Kelas yg diajar</h6>
 			<ul class="list-rombongan">
